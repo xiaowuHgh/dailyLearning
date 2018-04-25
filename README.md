@@ -5,13 +5,13 @@ this的指向在函数定义的时候是确定不了的，只有函数执行的�
 es6箭头语法除外  es6箭头函数在定义时this指向已确定
 ## call，apply， bind
 bind会给函数永久的绑定this
-``
+```
 function returnThis () {
-return this
+  return this
 }
 var boss1 = { name: 'boss1'}
 var boss1returnThis = returnThis.bind(boss1)
 boss1returnThis() // boss1
 var boss2 = { name: 'boss2' }
 boss1returnThis.call(boss2) // still boss1
-``
+```
